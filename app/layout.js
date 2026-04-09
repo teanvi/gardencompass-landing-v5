@@ -1,6 +1,9 @@
 import Script from "next/script";
 import "./globals.css";
 
+const vkPixelId =
+  process.env.NEXT_PUBLIC_VK_PIXEL_ID ?? process.env.VK_PIXEL_ID ?? "3756921";
+
 export const metadata = {
   metadataBase: new URL("https://v5.gardencompass.co"),
   title: "Цветник без провалов | Telegram-канал про садовые цветы",
@@ -71,7 +74,7 @@ export default function RootLayout({ children }) {
   w.__vkTrackingPid = pid;
 
   var _tmr = w._tmr || (w._tmr = []);
-  _tmr.push({id: "3756921", type: "pageView", start: (new Date()).getTime(), pid: pid});
+  _tmr.push({id: "${vkPixelId}", type: "pageView", start: (new Date()).getTime(), pid: pid});
 
   if (d.getElementById(id)) return;
   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
@@ -84,7 +87,7 @@ export default function RootLayout({ children }) {
         <noscript>
           <div>
             <img
-              src="https://top-fwz1.mail.ru/counter?id=3756921;js=na"
+              src={`https://top-fwz1.mail.ru/counter?id=${vkPixelId};js=na`}
               style={{ position: "absolute", left: "-9999px" }}
               alt=""
             />

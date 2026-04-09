@@ -17,6 +17,7 @@ This app expects the following public env vars:
 - `NEXT_PUBLIC_LANDING_VARIANT`
 - `NEXT_PUBLIC_CHANNEL_ID`
 - `NEXT_PUBLIC_PROVIDER`
+- `NEXT_PUBLIC_VK_PIXEL_ID`
 - optional `NEXT_PUBLIC_CAMPAIGN_ID`
 - optional `NEXT_PUBLIC_AD_ID`
 - optional `NEXT_PUBLIC_ADSET_ID`
@@ -32,6 +33,7 @@ The same values may also be supplied without the `NEXT_PUBLIC_` prefix for local
 - `LANDING_VARIANT`
 - `CHANNEL_ID`
 - `PROVIDER`
+- `VK_PIXEL_ID`
 - `CAMPAIGN_ID`
 - `AD_ID`
 - `ADSET_ID`
