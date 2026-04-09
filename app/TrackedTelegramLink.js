@@ -18,6 +18,22 @@ function buildRawMetadata() {
   };
 }
 
+function readVkTrackingPid() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  if (typeof window.__vkTrackingPid === "string" && window.__vkTrackingPid.length > 0) {
+    return window.__vkTrackingPid;
+  }
+
+  try {
+    return window.localStorage.getItem("vk_tracking_pid");
+  } catch {
+    return null;
+  }
+}
+
 export default function TrackedTelegramLink({
   className,
   children,
@@ -57,6 +73,7 @@ export default function TrackedTelegramLink({
         adId,
         adsetId,
         providerClickToken,
+        pid: readVkTrackingPid(),
         utmSource,
         utmCampaign,
         utmContent,
@@ -138,6 +155,7 @@ export default function TrackedTelegramLink({
         adId,
         adsetId,
         providerClickToken,
+        pid: readVkTrackingPid(),
         utmSource,
         utmCampaign,
         utmContent,
