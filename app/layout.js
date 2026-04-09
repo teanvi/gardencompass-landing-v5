@@ -11,7 +11,7 @@ export const metadata = {
     description:
       "Короткие сезонные советы для дачи и огорода: что делать сейчас, каких ошибок избегать и как не потерять урожай.",
     url: "https://v4.gardencompass.co",
-    siteName: "Мой цветущий сад",
+    siteName: "Моя дача",
     locale: "ru_RU",
     type: "website",
     images: [
@@ -19,7 +19,7 @@ export const metadata = {
         url: "/avatar.png",
         width: 640,
         height: 640,
-        alt: "Мой цветущий сад — Telegram-канал про дачу и огород"
+        alt: "Моя дача — Telegram-канал про дачу и огород"
       }
     ]
   },

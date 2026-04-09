@@ -16,6 +16,26 @@ const {
   utmContent
 } = loadLandingRuntimeConfig();
 
+const subscriberCount = 895;
+const valueItems = [
+  {
+    emoji: "🚫",
+    text: "Без советов «по-московски» — работает для любого умеренного климата"
+  },
+  {
+    emoji: "✅",
+    text: "Проверено на практике, а не красиво выглядит на картинке"
+  },
+  {
+    emoji: "📅",
+    text: "Один разбор в неделю — не лента, не шум, не ежедневные посты"
+  },
+  {
+    emoji: "🌿",
+    text: `${subscriberCount} дачников уже выбрали канал как основной источник`
+  }
+];
+
 export default function Page() {
   return (
     <main className="page-shell">
@@ -24,13 +44,17 @@ export default function Page() {
           <div className="eyebrow-row">
             <div className="eyebrow-group">
               <img className="mini-avatar" src="/avatar.png" alt="" aria-hidden="true" />
-              <span className="eyebrow">Мой цветущий сад</span>
+              <span className="eyebrow">🍓 Моя дача</span>
             </div>
             <span className="locale-pill">RU</span>
           </div>
-          <h1>Хватит собирать советы по кусочкам. Всё для дачного цветника уже в одном канале</h1>
-          <p className="hero-lead">Практичные разборы по розам, гортензиям, пионам и петуниям, сезонные работы и понятные решения для обычного сада.</p>
-          <p className="hero-copy">597 подписчиков уже читают канал как практичный ориентир по садовым цветам</p>
+          <h1>Хватит гуглить и получать разные ответы</h1>
+          <p className="hero-lead">Моя дача — один канал для дачи. Без противоречий, без регионального уклона, без воды.</p>
+          <p className="hero-copy">
+            {subscriberCount} дачников из России, Украины и Казахстана читают его как главный ориентир по огороду.
+            Короткий разбор раз в неделю: что делать на участке в ваши сроки, что пропускать, на что не тратить
+            время и деньги.
+          </p>
           <div className="cta-wrap">
             <TrackedTelegramLink
               className="primary-cta"
@@ -47,7 +71,7 @@ export default function Page() {
               utmCampaign={utmCampaign}
               utmContent={utmContent}
             >
-              Перейти в канал
+              Подписаться в Telegram →
             </TrackedTelegramLink>
           </div>
         </div>
@@ -56,34 +80,23 @@ export default function Page() {
         <div className="value-section card">
           <div className="value-layout">
             <div className="value-copy">
-              <h2>Что делает этот канал полезным</h2>
-              <p className="value-intro">Один практичный Telegram-канал про садовые цветы вместо разрозненных советов из интернета.</p>
+              <h2>Что делает этот канал другим</h2>
               <ul className="bullet-list">
-                <li>
-                  <span className="bullet-emoji" aria-hidden="true">
-                    🌿
-                  </span>
-                  <span>Уход за розами, гортензиями, пионами и петуниями без лишней теории</span>
-                </li>
-                <li>
-                  <span className="bullet-emoji" aria-hidden="true">
-                    ✅
-                  </span>
-                  <span>Подбор грунта, удобрений и сезонных работ под реальный дачный участок</span>
-                </li>
-                <li>
-                  <span className="bullet-emoji" aria-hidden="true">
-                    🪴
-                  </span>
-                  <span>Фото-идеи и понятные подсказки, которые помогают держать цветник в порядке</span>
-                </li>
+                {valueItems.map((item) => (
+                  <li key={item.text}>
+                    <span className="bullet-emoji" aria-hidden="true">
+                      {item.emoji}
+                    </span>
+                    <span>{item.text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <aside className="value-visual">
-              <img className="value-avatar" src="/avatar.png" alt="Аватар Telegram-канала Мой цветущий сад" />
+              <img className="value-avatar" src="/avatar.png" alt="Аватар Telegram-канала Моя дача" />
               <div className="value-visual-copy">
-                <strong>Мой цветущий сад в Telegram</strong>
-                <p>Практичный Telegram-канал про садовые цветы: уход, грунт, обрезка, сезонные работы и идеи для дачного цветника.</p>
+                <strong>🍓 Моя дача в Telegram</strong>
+                <p>Сезонные разборы, схемы посадки и практичные подсказки для обычной дачи.</p>
               </div>
             </aside>
           </div>
@@ -93,9 +106,12 @@ export default function Page() {
         <div className="closing-cta card">
           <div className="closing-header">
             <img className="mini-avatar" src="/avatar.png" alt="" aria-hidden="true" />
-            <h2>Один Telegram-источник вместо информационного шума</h2>
+            <h2>Один источник вместо бесконечного гугления</h2>
           </div>
-          <p>597 подписчиков уже читают канал как практичный ориентир по садовым цветам. Контент строится вокруг реальных сезонных задач: посев, грунт, свет, уход и порядок в цветнике. Открой канал и сохрани себе понятный источник идей, сезонных подсказок и решений для дачного сада.</p>
+          <p>
+            Подходит для дачников от южных регионов до севера умеренного климата. Без агрономического жаргона —
+            понятно для обычного человека, не специалиста.
+          </p>
           <div className="cta-wrap">
             <TrackedTelegramLink
               className="primary-cta"
@@ -112,7 +128,7 @@ export default function Page() {
               utmCampaign={utmCampaign}
               utmContent={utmContent}
             >
-              Подписаться в Telegram
+              Подписаться в Telegram →
             </TrackedTelegramLink>
           </div>
         </div>
