@@ -46,6 +46,12 @@ The CTA flow is:
 2. persist the CTA click on button press
 3. navigate to `trackerHandoffUrl` returned by `traffic-landing`
 
+## Production
+
+- public URL: `https://v4.gardencompass.co`
+- Railway service: `gardencompass-landing-v4`
+- tracked landing flow is live and uses `traffic-landing` as the bridge
+
 ## Local Checks
 
 - `npm test`
