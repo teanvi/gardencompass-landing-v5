@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import {
   createLandingCtaClickRequest,
-  createLandingVisitRequest,
   readLandingAttributionFromSearchParams
 } from "../lib/traffic-landing-contract.js";
+import { getOrCreateLandingVisit } from "./landing-visit-client.js";
 
 function buildRawMetadata() {
   if (typeof window === "undefined") {
@@ -59,46 +59,25 @@ export default function TrackedTelegramLink({
       return;
     }
 
-    const attribution = readLandingAttributionFromSearchParams(
-      new URL(window.location.href).searchParams
-    );
-    const request = createLandingVisitRequest({
-      trafficLandingBaseUrl,
-      landingSlug,
-      landingVariant,
-      channelId,
-      provider,
-      attribution: {
-        campaignId,
-        adId,
-        adsetId,
-        providerClickToken,
-        pid: readVkTrackingPid(),
-        utmSource,
-        utmCampaign,
-        utmContent,
-        ...attribution
-      },
-      rawMetadata: buildRawMetadata()
-    });
-
     let cancelled = false;
 
     async function createLandingVisit() {
       try {
-        const response = await fetch(request.url, {
-          method: "POST",
-          headers: {
-            "content-type": "application/json"
-          },
-          body: JSON.stringify(request.body)
+        const landingVisitResponse = await getOrCreateLandingVisit({
+          trafficLandingBaseUrl,
+          landingSlug,
+          landingVariant,
+          channelId,
+          provider,
+          campaignId,
+          adId,
+          adsetId,
+          providerClickToken,
+          utmSource,
+          utmCampaign,
+          utmContent
         });
 
-        if (!response.ok) {
-          throw new Error("landing_visit_failed");
-        }
-
-        const landingVisitResponse = await response.json();
         if (!cancelled) {
           setLandingVisit(landingVisitResponse);
         }
