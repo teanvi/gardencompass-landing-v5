@@ -3,7 +3,8 @@ import test from "node:test";
 
 import {
   createLandingCtaClickRequest,
-  createLandingVisitRequest
+  createLandingVisitRequest,
+  readLandingAttributionFromSearchParams
 } from "../lib/traffic-landing-contract.js";
 
 test("creates traffic landing visit and cta click requests from landing context", () => {
@@ -77,4 +78,21 @@ test("creates traffic landing visit and cta click requests from landing context"
       }
     }
   );
+});
+
+test("reads rb_clickid as provider click token alias", () => {
+  const url = new URL(
+    "https://v5.gardencompass.co/?rb_clickid=rb-1&utm_source=vk_ads&utm_campaign=cmp-1&utm_content=creative-a"
+  );
+
+  assert.deepEqual(readLandingAttributionFromSearchParams(url.searchParams), {
+    campaignId: null,
+    adId: null,
+    adsetId: null,
+    providerClickToken: "rb-1",
+    pid: null,
+    utmSource: "vk_ads",
+    utmCampaign: "cmp-1",
+    utmContent: "creative-a"
+  });
 });
