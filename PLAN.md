@@ -1,4 +1,4 @@
-# TDD Plan: Garden Compass Landing V4
+# TDD Plan: Garden Compass Landing V5
 
 | # | Unit | Goal |
 |---|------|------|
@@ -10,11 +10,11 @@
 
 ## Locked Scope
 
-- This app stays isolated under `apps/gardencompass-landing-v4`.
+- This app stays isolated under `apps/gardencompass-landing-v5`.
 - The reference app `apps/gardencompass-landing-v3` remains untouched.
 - `traffic-landing` owns visit and CTA persistence; this app only calls its public contract.
 - The CTA must no longer point directly at Telegram.
-- The landing is live on `https://v4.gardencompass.co`.
+- The planned public domain is `https://v5.gardencompass.co`.
 
 ## Quality Gates
 

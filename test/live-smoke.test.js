@@ -74,9 +74,9 @@ test("runs the landing bridge smoke path and waits for tracker redirect", async 
     fetchImpl,
     config: {
       trafficLandingBaseUrl: "https://landing.example.com",
-      landingSlug: "gardencompass-landing-v4",
+      landingSlug: "gardencompass-landing-v5",
       landingVariant: "hero-a",
-      channelId: "3636901853",
+      channelId: "3779805576",
       provider: "vk",
       campaignId: "cmp-1",
       adId: "ad-1",

@@ -2,11 +2,11 @@
 
 Local workspace path:
 
-- `apps/gardencompass-landing-v4`
+- `apps/gardencompass-landing-v5`
 
 ## Goal
 
-Launch the v4 Garden Compass landing for `v4.gardencompass.co` with the new tracked flow:
+Launch the v5 Garden Compass landing for `v5.gardencompass.co` with the new tracked flow:
 
 `landing page -> traffic-landing -> tracker -> Telegram invite`
 
@@ -18,10 +18,10 @@ Launch the v4 Garden Compass landing for `v4.gardencompass.co` with the new trac
 
 ## Product Context
 
-- existing Telegram channel about dacha and gardening
-- content stays aligned with the current Garden Compass v3 copy
+- existing Telegram channel `@moi_sadick` about garden flowers and decorative planting
+- content stays aligned with the current Garden Compass visual/editorial direction
 - landing is for paid VK traffic
-- the public domain target is `v4.gardencompass.co`
+- the public domain target is `v5.gardencompass.co`
 
 ## Direction
 

@@ -2,16 +2,16 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://v4.gardencompass.co"),
-  title: "Огород без провалов | Telegram-канал про дачу",
+  metadataBase: new URL("https://v5.gardencompass.co"),
+  title: "Цветник без провалов | Telegram-канал про садовые цветы",
   description:
-    "Короткие сезонные советы для дачи и огорода: что делать сейчас, каких ошибок избегать и как не потерять урожай. Подпишитесь в Telegram.",
+    "Короткие сезонные советы по садовым цветам: что делать сейчас, как ухаживать за клумбой и каких ошибок избегать. Подпишитесь в Telegram.",
   openGraph: {
-    title: "Огород без провалов | Telegram-канал про дачу",
+    title: "Цветник без провалов | Telegram-канал про садовые цветы",
     description:
-      "Короткие сезонные советы для дачи и огорода: что делать сейчас, каких ошибок избегать и как не потерять урожай.",
-    url: "https://v4.gardencompass.co",
-    siteName: "Моя дача",
+      "Короткие сезонные советы по садовым цветам: что делать сейчас, как ухаживать за клумбой и каких ошибок избегать.",
+    url: "https://v5.gardencompass.co",
+    siteName: "Мой цветущий сад",
     locale: "ru_RU",
     type: "website",
     images: [
@@ -19,15 +19,15 @@ export const metadata = {
         url: "/avatar.png",
         width: 640,
         height: 640,
-        alt: "Моя дача — Telegram-канал про дачу и огород"
+        alt: "Мой цветущий сад — Telegram-канал про садовые цветы"
       }
     ]
   },
   twitter: {
     card: "summary",
-    title: "Огород без провалов | Telegram-канал про дачу",
+    title: "Цветник без провалов | Telegram-канал про садовые цветы",
     description:
-      "Короткие сезонные советы для дачи и огорода: что делать сейчас, каких ошибок избегать и как не потерять урожай.",
+      "Короткие сезонные советы по садовым цветам: что делать сейчас, как ухаживать за клумбой и каких ошибок избегать.",
     images: ["/avatar.png"]
   },
   icons: {
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
   w.__vkTrackingPid = pid;
 
   var _tmr = w._tmr || (w._tmr = []);
-  _tmr.push({id: "3756886", type: "pageView", start: (new Date()).getTime(), pid: pid});
+  _tmr.push({id: "3750452", type: "pageView", start: (new Date()).getTime(), pid: pid});
 
   if (d.getElementById(id)) return;
   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
         <noscript>
           <div>
             <img
-              src="https://top-fwz1.mail.ru/counter?id=3756886;js=na"
+              src="https://top-fwz1.mail.ru/counter?id=3750452;js=na"
               style={{ position: "absolute", left: "-9999px" }}
               alt=""
             />

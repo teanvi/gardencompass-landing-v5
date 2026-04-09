@@ -9,9 +9,9 @@ import {
 test("creates traffic landing visit and cta click requests from landing context", () => {
   const context = {
     trafficLandingBaseUrl: "https://landing.example.com",
-    landingSlug: "gardencompass-landing-v4",
+    landingSlug: "gardencompass-landing-v5",
     landingVariant: "hero-a",
-    channelId: "3636901853",
+    channelId: "3779805576",
     provider: "vk",
     campaignId: "cmp-1",
     adId: "ad-1",
@@ -31,9 +31,9 @@ test("creates traffic landing visit and cta click requests from landing context"
     {
       url: "https://landing.example.com/api/landing-visits",
       body: {
-        landingSlug: "gardencompass-landing-v4",
+        landingSlug: "gardencompass-landing-v5",
         landingVariant: "hero-a",
-        channelId: "3636901853",
+        channelId: "3779805576",
         provider: "vk",
         campaignId: "cmp-1",
         adId: "ad-1",
@@ -59,9 +59,9 @@ test("creates traffic landing visit and cta click requests from landing context"
       url: "https://landing.example.com/api/landing-visits/landing_visit_123/cta-clicks",
       body: {
         landingVisitId: "landing_visit_123",
-        landingSlug: "gardencompass-landing-v4",
+        landingSlug: "gardencompass-landing-v5",
         landingVariant: "hero-a",
-        channelId: "3636901853",
+        channelId: "3779805576",
         provider: "vk",
         campaignId: "cmp-1",
         adId: "ad-1",

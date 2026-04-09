@@ -1,4 +1,4 @@
-# Garden Compass V4
+# Garden Compass V5
 
 ## Purpose
 
@@ -48,9 +48,9 @@ The CTA flow is:
 
 ## Production
 
-- public URL: `https://v4.gardencompass.co`
-- Railway service: `gardencompass-landing-v4`
-- tracked landing flow is live and uses `traffic-landing` as the bridge
+- target public URL: `https://v5.gardencompass.co`
+- target Railway service: `gardencompass-landing-v5`
+- this app is prepared for the tracked landing flow and uses `traffic-landing` as the bridge
 
 ## Local Checks
 
@@ -64,9 +64,9 @@ Repeatable live bridge smoke:
 
 ```bash
 TRAFFIC_LANDING_BASE_URL=https://traffic-landing.example.com \
-LANDING_SLUG=gardencompass-landing-v4 \
+LANDING_SLUG=gardencompass-landing-v5 \
 LANDING_VARIANT=hero-a \
-CHANNEL_ID=3636901853 \
+CHANNEL_ID=3779805576 \
 PROVIDER=vk \
 npm run smoke:bridge
 ```
@@ -82,5 +82,5 @@ The smoke script performs:
 ## Scope
 
 - The reference app in `apps/gardencompass-landing-v3` stays untouched.
-- This landing stays isolated under `apps/gardencompass-landing-v4`.
+- This landing stays isolated under `apps/gardencompass-landing-v5`.
 - Direct Telegram links are not used by this UI anymore.
