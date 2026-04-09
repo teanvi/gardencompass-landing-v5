@@ -1,0 +1,7 @@
+.next/
+node_modules/
+*.log
+.env
+.claude/
+vk.pixel.html
+.ops/*.json
